@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ACTIVIDADES DE APRENDIZAJE EXPERIENCIAL</title>
+    <link rel="shortcut icon" type="image/x-icon" href="C:/Users/Classic/App/urosario.ico">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+  </head>
+<header>
+    <div class="logoUR">
+        <img src="LogoUR.png">
+    </div>
+</header>
+  <body>
+  <div>
+    <h1>Información aprendizaje experiencial</h1>
+      <p>Forms para recolección de la información de actividades de aprendizaje experiencial, innovación pedagogica y experimentación, <b>recuerde que debe llenar el formulario para cada actividad que realice. 
+        <h3>           </h3> <i>Gracias por su compromiso.</i></b></pr>
+</div>  
+    <div class="container d-flex justify-content-center align-items-center">
+    <div class="card">
+    <div class="card-header text-warning h4 font-wight-bolder">
+    <h2>Información del nivel/programa</h2>
+    <form name="formulario1" action="">
+        Nivel de formación: <select name="cosa" onchange="cambia()">
+            <option value="0" disabled selected>--SELECCIONE UNA OPCIÓN--
+            <option value="1">Pregrado
+            <option value="2">Especialización
+            <option value="3">GSB/Maestría
+            <option value="4">Doctorado
+            <option value="5">OTROS
+        </select>
+        Programa: <select name="opt">
+            <option value="-">--SELECCIONE UNA OPCIÓN--
+        </select>
+    </form>
+    <script type="text/javascript">
+        var opt_1 = new Array ("-", "Programa de Administración de Empresas", "Programa de Administración de Negocios Internacionales", "Programa de Administración en Logística y Producción", "Programa de Marketing y Negocios Digitales", "Pregrado en Emprendimiento")
+        var opt_2 = new Array ("-", "Gerencia Integral de Servicio de Salud", "Gerencia de Marketing para Entornos Digitales", "Gerencia Integral de Servicios de Salud", "Gerencia de Empresas", "Gestión Humana", "Auditoría en Salud", "Gerencia de Proyectos de Construcción e Infraestructura", "Gerencia de Proyectos de Servicios con TIC", "Gerencia de Negocios Globales", "Mercadeo")
+        var opt_3 = new Array ("-", "Maestría en Dirección", "Maestría en Business Analytics", "MBA - Maestría en Administración - Part Time", "MBA - Maestría en Administración - One Year", "MEI - Maestría en Emprendimiento e Innovación", "MM - Maestría en Marketing", "MAS - Maestría en Administración en Salud", "Maestría en Negocios y Derecho")
+        var opt_4 = new Array ("-", "No aplica")
+        var opt_5 = new Array ("-")
+        function cambia() {
+            var cosa;
+            cosa = document.formulario1.cosa[document.formulario1.cosa.selectedIndex].value 
+            if(cosa!=0) {
+                mis_opts=eval("opt_"+cosa);
+                num_opts=mis_opts.length;
+                document.formulario1.opt.length = num_opts;
+                for(i=0; i<num_opts; i++) {
+                    document.formulario1.opt.options[i].value=mis_opts[i];
+                    document.formulario1.opt.options[i].text=mis_opts[i];
+                }
+                }else{
+                    document.formulario1.opt.length = 1;
+                    document.formulario1.opt.options[0].value="-";
+                    document.formulario1.opt.options[0].text="-";
+                }
+
+            }
+    </script>
+</div>
+<div>
+    <h2>Información de la asignatura</h2>
+        <form action="" method="post" name="formul">
+            Área de la asignatura: <input name="AreaAsignatura" type="text">
+        <form action="" method="post" name="formul">
+            Asignatura: <input name="Asignatura" type="text">
+        <form action="" method="post" name="formul">
+            Modalidad de la asignatura: <select name="Modalidad">
+                <option value="0" disabled selected>--SELECCIONE UNA OPCIÓN--
+                <option value="1">Virtual</option>
+                <option value="2">Presencial</option>
+                <option value="3">Mixta</option>
+                </select>
+        <form action="" method="post" name="formul">
+            Grupo: <input name="Grupo" type="number">
+        <form action="" method="post" name="formul">
+            Idioma: <input name="Grupo" type="text">        
+</div>
+<div>
+    <h2>Información de la actividad</h2>
+        <form action="" method="post" name="formul">
+            <h3>Fecha de la actividad</h3>
+            De: <input name="Fecha" type="date">
+            A <i>(Si aplica:)</i> <input name="Fecha" type="date">
+    <h3>Categoria de la actividad</h3
+
+    <!--CATEGORIA ACTIVIDAD->
+      Categoría de la actividad: <select id="select" name="select">
+        <option value="0" disabled selected>--SELECCIONE UNA OPCIÓN--
+        <option value="div1">Uso de laboratorios</option> 
+        <option value="div2">Realidad Empresarial</option> 
+        <option value="div3">Estretagias pedagogicas</option> 
+        <option value="div4">Internacionalización</option>
+        <option value="div5">Otro</option>
+    </select>
+
+        <div id="pai">
+            <div id="div1">
+                <h2>Datos de la actividad</h2>
+                <h3>Uso de laboratorios</h3>
+                Laboratorio que utilizó: <select name="Tipo de actividad" id="lab">
+                    <option value="" disabled selected>--SELECCIONE UNA OPCIÓN--</option> 
+                    <option value="Team Space">Team Space</option> 
+                    <option value="Maker Space">Maker Space</option> 
+                    <option value="Genius Space">Genius Space</option>
+                    <option value="Smart Logistics">Smart Logistics</option>
+                    <option value="Eye Tracker">Eye Tracker</option>
+                    <option value="Toma de decisiones">Toma de decisiones</option>
+                    <option value="Face Coding">Face Coding</option>
+                    <option value="Camara Gessel">Camara Gessel</option>
+                    <option value="Shopper Lab">Shopper Lab</option>
+                     <option value="Innovación pedagogica">Innovación pedagogica</option>
+                </select>
+                <form action="" method="post" name="formul">
+                Describa brevemente su actividad: <input name="actividad" type="text" maxlength="200" id="Descripción">
+            </div>
+
+            <div id="div2">
+                <h2>Datos de la actividad</h2>
+                <h3>Realidad empresarial</h3>
+                Actividad que realizó: <select name="Tipo de actividad" id="Cargo">
+                <option value="" disabled selected>--SELECCIONE UNA OPCIÓN--</option> 
+                <option value="Empresario en el aula">Empresario en el aula</option> 
+                <option value="Reto Empresarial">Reto Empresarial</option> 
+                <option value="Visita Empresarial">Visita Empresarial</option>
+                <option value="Caso de estudio">Caso de estudio</option>
+        </select>
+        <form action="" method="post" name="formul">
+            Empresa: <input name="actividad" type="text" id="Empresa">
+            <form action="" method="post" name="formul">
+            Empresario invitado: <input name="Empresario" type="text" id="Empresario">
+            <form action="" method="post" name="formul">
+            Cargo del Empresario: <input name="actividad" type="text" id="Cargo">
+            <form action="" method="post" name="formul">
+            Tamaño de la empresa: <select name="Tipo de actividad" id="Cargo">
+                <option value="" disabled selected>--SELECCIONE UNA OPCIÓN--</option> 
+                <option value="Pequeña">Pequeña</option> 
+                <option value="Mediana">Mediana</option> 
+                <option value="Grande">Grande</option>
+                <option value="Multinacional">Multinacional</option>
+            </select>
+            </div>
+
+            <div id="div3">
+                <h2>Datos de la actividad</h2>
+                <h3>Estrategias pedagogicas</h3>
+                <form action="" method="post" name="formul" >
+                Estrategía pedagogica que utilizó: <select name="Tipo de actividad" id="Cargo">
+                    <option value="" disabled selected>--SELECCIONE UNA OPCIÓN--</option> 
+                    <option value="1">Caso de estudio</option>
+                    <option value="2">Aprendizaje Basado en Retos</option> 
+                    <option value="3">Aprendizaje Basado en Problemas</option>
+                    <option value="4">Aprendizaje Basado en Proyectos</option>
+                    <option value="5">Gamificación</option>
+                    <option value="6">Desarrollo desde el humano</option>
+                    <option value="7">Juego de roles</option>
+                    <option value="8">Aula Invertida</option>
+                    <option value="9">Blended Learning</option>
+                    <option value="10">Debates</option>
+                </select>
+                <form action="" method="post" name="formul">
+                Describa brevemente su actividad: <input name="actividad" type="text" maxlength="200" id="Descripción">
+            </div>
+
+            <div id="div4">
+                <h2>Datos de la actividad</h2>
+                <h3>Internacionalización</h3>
+                    <iframe src = "ejem.html" style = "width:100%; height:600px; border:none" ></iframe>
+            </div>    
+        </div>
+    </div>
+        <h3>Evidencias</h3>
+        <p> Las evidencias <b>deben</b> ser: <h3>           </h3>
+            • Listado de estudiantes Universidad del Rosario. <h3>           </h3>
+            • Base de estudiantes internacional (si aplica).<h3>           </h3>
+            • Soportes de actividades o proyecto, como fotografías, o resultados.</p>
+    <a target= "_blanck" href ="https://uredu-my.sharepoint.com/:f:/g/personal/angela_burgos_urosario_edu_co/Ev-yx7q3XAtGnbWkG5WNf38BcJ3FQ6jabVLe_gosM_yvWA?e=cDpYMS">Para subir las evidencias de sus actividades haga click acá.</a>
+    </body>
+    <h3>           </h3>
+    <input type="submit" value="Enviar Formulario">
+    <input type="reset" valie="Borrar Todo">
+    <foorter>
+        <p>Dirección de Desarrollo - Escuela de Admnistración - Universidad del Rosario 2022. </p>
+    </foorter>
+</html>

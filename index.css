@@ -1,0 +1,19 @@
+#pai div {
+    display: none;
+}
+header{
+    display: flex;
+}
+.logoUR img{
+    height: 120px;
+}
+body {background: #ffeeee;
+    font-family: 'Nunito';
+    margin: 1cm;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+}
+body {
+   width:90%; 
+}
